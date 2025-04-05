@@ -31,7 +31,7 @@ void trackline_forward() {
     }
     // break;
   }
-  forward(200);
+  forward(100);
   stop(200);
 }
 void trackline_backward() {
@@ -61,17 +61,19 @@ void trackline_backward() {
   stop(200);
 }
 void turn_right_ir() {
-  turn_right(355);
+  turn_right(325);
+  stop(200);
   while (digitalRead(R1_IR) > 0) {
-    turn_right(250);
+    turn_right(50);
     break;
   }
   stop(200);
 }
 void turn_left_ir() {
-  turn_left(345);
+  turn_left(325);
+  stop(200);
   while (digitalRead(L1_IR) > 0) {
-    turn_left(250); 
+    turn_left(50); 
     break;
   }
   stop(200);
